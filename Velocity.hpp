@@ -13,7 +13,7 @@ class Velocity {
         vec = Point{x, y} * abs;
     }
 
-    inline Velocity(const Point& vector) {
+    inline explicit Velocity(const Point& vector) {
         setVector(vector);
     }
 
