@@ -23,9 +23,4 @@ class World {
     // Длина отрезка времени, который не был
     // учтен при прошлой симуляции. См. реализацию update
     double restTime = 0.;
-    
-    //Объекты
-    Velocity vVelocity;
-    Point pPoint;
-    Ball bBalls;
 };

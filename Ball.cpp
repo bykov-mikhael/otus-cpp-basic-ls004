@@ -2,32 +2,11 @@
 #include <cmath>
 
 /**
- * Создает объект Ball
- * @brief конструктор объекта Ball
- * @param velocity конструктор объекта скорости
- * @param center конструктор объекта точка
- * @param radius параметр радиус
- * @param mass параметр масса
- */
-Ball::Ball(Velocity &velocity, Point &center, double radius) {
-    Velocity vVelocity;
-    Point pCenter;
-    this->dRadius = radius;
-    //this->dMass = mass;
-}
-
-Ball::Ball() {
-    ;
-}
-
-/**
  * Задает скорость объекта
  * @param velocity новое значение скорости
  */
 void Ball::setVelocity(const Velocity& velocity) {
     // TODO: место для доработки
-
-    this->vVelocity = velocity;
 }
 
 /**
@@ -56,7 +35,6 @@ void Ball::draw(Painter& painter) const {
  */
 void Ball::setCenter(const Point& center) {
     // TODO: место для доработки
-    
 }
 
 /**
@@ -74,7 +52,7 @@ Point Ball::getCenter() const {
  */
 double Ball::getRadius() const {
     // TODO: место для доработки
-    return dRadius;
+    return {};
 }
 
 /**
@@ -86,6 +64,5 @@ double Ball::getRadius() const {
  */
 double Ball::getMass() const {
     // TODO: место для доработки
-
-    return dMass;
+    return {};
 }
