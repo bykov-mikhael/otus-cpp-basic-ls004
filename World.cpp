@@ -1,3 +1,5 @@
+#include <iostream>
+
 #include "World.hpp"
 #include "Painter.hpp"
 #include <fstream>
@@ -64,11 +66,33 @@ World::World(const std::string& worldFilePath) {
         // Здесь не хватает самого главного - создания
         // объекта класса Ball со свойствами, прочитанными
         // выше, и его помещения в контейнер balls
+        //Создаём объект Point
+        Point pPoint{x, y};
+
+        //Создаём объект Velocity
+        Point pVelocity{vx, vy};
+
+
+        //Создаём объект Color
+        Color cColor{red, green, blue};
+
+        //std::cout << x << y << vx << vy << red << green << blue << radius << std::endl;
+
+        // Объявление объекта Ball
+        Ball bBall(pPoint, pVelocity, cColor, radius); 
 
         // После того как мы каким-то образом
         // сконструируем объект Ball ball;
         // добавьте его в конец контейнера вызовом
         // balls.push_back(ball);
+
+ 
+        // После того как мы каким-то образом
+        // сконструируем объект Ball ball;
+        // добавьте его в конец контейнера вызовом
+        // balls.push_back(ball);
+
+        balls.push_back(bBall);
     }
 }
 
