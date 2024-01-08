@@ -67,19 +67,18 @@ World::World(const std::string& worldFilePath) {
         // объекта класса Ball со свойствами, прочитанными
         // выше, и его помещения в контейнер balls
         //Создаём объект Point
-        Point pPoint{x, y};
+        m_pPoint = {x, y};
 
         //Создаём объект Velocity
-        Point pVelocity{vx, vy};
-
+        m_pVelocity = {vx, vy};
 
         //Создаём объект Color
-        Color cColor{red, green, blue};
+        m_cColor = {red, green, blue};
 
-        //std::cout << x << y << vx << vy << red << green << blue << radius << std::endl;
+        std::cout << "class world" << x << y << vx << vy << red << green << blue << radius << std::endl;
 
         // Объявление объекта Ball
-        Ball bBall(pPoint, pVelocity, cColor, radius); 
+        Ball bBall(m_pPoint, m_pVelocity, m_cColor, radius); 
 
         // После того как мы каким-то образом
         // сконструируем объект Ball ball;

@@ -1,3 +1,5 @@
+#include <iostream>
+
 #include "Ball.hpp"
 #include <cmath>
 
@@ -28,7 +30,10 @@ Velocity Ball::getVelocity() const {
  */
 void Ball::draw(Painter& painter) const {
     // TODO: место для доработки
-    painter.draw(m_pPoint, m_pPoint, m_cColor);
+    
+    std::cout << this->m_pPoint.x << this->m_pPoint.y << m_dRadius << std::endl;
+
+    painter.draw(m_pPoint, m_dRadius, m_cColor);
 }
 
 /**

@@ -8,7 +8,7 @@ class Painter;
 
 class World {
   public:
-    World(const std::string& worldFilePath);
+    explicit World(const std::string& worldFilePath);
     void show(Painter& painter) const;
     void update(double time);
 
@@ -24,7 +24,7 @@ class World {
     // учтен при прошлой симуляции. См. реализацию update
     double restTime = 0.;
 
-    Point pPoint;
-    Point pVelocity;
-    Color cColor;
+    Point m_pPoint;
+    Point m_pVelocity;
+    Color m_cColor;
 };

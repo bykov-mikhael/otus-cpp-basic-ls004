@@ -1,4 +1,7 @@
 #pragma once
+
+#include <iostream>
+
 #include "Painter.hpp"
 #include "Point.hpp"
 #include "Velocity.hpp"
@@ -9,8 +12,9 @@ public:
                                                                                                 m_pPoint(pPoint),
                                                                                                 m_cColor(cColor),
                                                                                                 m_dRadius(dRadius) {
+                                                                                                
+                                                                                                std::cout << "ctor Ball::Ball" << m_pPoint.x << m_pPoint.y << std::endl;
 
-                                                                                                    
                                                                                                 };
     void setVelocity(const Velocity& velocity);
     Velocity getVelocity() const;
