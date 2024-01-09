@@ -8,14 +8,11 @@
 
 class Ball {
 public:
-    Ball(const Point &pPoint, const Point &pVelocity, const Color &cColor, double dRadius)  :   m_vVelocity(pVelocity),
-                                                                                                m_pPoint(pPoint),
-                                                                                                m_cColor(cColor),
-                                                                                                m_dRadius(dRadius) {
-                                                                                                
-                                                                                                std::cout << "ctor Ball::Ball" << m_pPoint.x << m_pPoint.y << std::endl;
-
-                                                                                                };
+    Ball(const Point &pCenter, const Velocity &vVelocity, const Color &cColor, double dRadius, bool isCollidable)  :    m_vVelocity(vVelocity),
+                                                                                                                        m_pCenter(pCenter),
+                                                                                                                        m_cColor(cColor),
+                                                                                                                        m_dRadius(dRadius),
+                                                                                                                        m_bIsCollidable(isCollidable) { };
     void setVelocity(const Velocity& velocity);
     Velocity getVelocity() const;
     void draw(Painter& painter) const;
@@ -27,9 +24,11 @@ public:
 private:
     Velocity m_vVelocity;
     
-    Point m_pPoint;
+    Point m_pCenter;
 
     Color m_cColor;
 
     double m_dRadius;
+
+    bool m_bIsCollidable;
 };

@@ -24,7 +24,7 @@ class World {
     // учтен при прошлой симуляции. См. реализацию update
     double restTime = 0.;
 
-    Point m_pPoint;
+    Point m_pCenter;
     Point m_pVelocity;
     Color m_cColor;
 };
