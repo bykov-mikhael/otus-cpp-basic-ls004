@@ -79,7 +79,7 @@ World::World(const std::string& worldFilePath) {
         //std::cout << "class world" << x << y << vx << vy << red << green << blue << radius << std::endl;
 
         // Объявление объекта Ball
-        Ball bBall(pCenter, vVelocity, cColor, radius, isCollidable = false); 
+        Ball bBall(pCenter, vVelocity, cColor, radius, isCollidable); 
 
         // После того как мы каким-то образом
         // сконструируем объект Ball ball;
