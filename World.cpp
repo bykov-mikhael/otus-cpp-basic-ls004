@@ -90,6 +90,14 @@ World::World(const std::string& worldFilePath) {
     }
 }
 
+/**
+ * Переггрузка оператора чтения из файла
+ * Задание сделать звгрузку из файла напрямую в объект класса
+*/
+std::istream& operator>>(std::istream &stream, Point &pObject) {
+    
+}
+
 /// @brief Отображает состояние мира
 void World::show(Painter& painter) const {
     // Рисуем белый прямоугольник, отображающий границу
